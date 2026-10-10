@@ -20,6 +20,7 @@ Orange is the primary accent. Keep presentations minimal, with generous spacing 
 - [Avatar SVG](assets/avatar.svg) — editable square original.
 - [Banner PNG](assets/banner.png) — 1600 × 420; organization and repository README headers.
 - [Banner SVG](assets/banner.svg) — editable original.
+- [Social preview PNG](assets/social-preview.png) and [SVG](assets/social-preview.svg) — 1280 × 640; repository sharing cards.
 - [Color symbol](assets/symbol-color.svg), [black symbol](assets/symbol-black.svg), [white symbol](assets/symbol-white.svg) — transparent originals with identical geometry.
 
 Keep proportions and colors intact. Preserve the padding in the avatar for circular crops. Do not add glow, gradients, shadows, shields or locks. Use black or white monochrome symbols where color is unsuitable.
