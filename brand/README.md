@@ -1,6 +1,6 @@
 # Horizon — Frontier Identity
 
-Horizon v1 is the founder-approved graphical identity for the Frontier Identity GitHub organization. The segmented F represents a horizon and forward direction.
+Horizon Modular v2 is the founder-approved graphical identity for the Frontier Identity GitHub organization, selected as proposal 01 on 2026-10-11. It supersedes Horizon v1. The segmented F uses a rounded orange upper horizon, an orange accent square, a white middle segment and a white lower stem. The full wordmark is FRONTIER IDENTITY.
 
 ## Palette
 
@@ -12,7 +12,7 @@ Horizon v1 is the founder-approved graphical identity for the Frontier Identity 
 | Secondary text | `#A8B0B7` |
 | Frontier Orange | `#FF6B21` |
 
-Orange is the primary accent. Keep presentations minimal, with generous spacing and strong contrast. The wordmark uses bold Arial with Helvetica and sans-serif fallbacks. Use the PNG banner for consistent rendering across systems.
+Orange is the primary accent. Keep presentations minimal, with generous spacing and strong contrast. The wordmark uses bold Arial with Helvetica and sans-serif fallbacks; IDENTITY is smaller and spaced beneath FRONTIER. Use the PNG banner for consistent rendering across systems.
 
 ## Assets
 
@@ -32,3 +32,7 @@ Start each repository README with the approved banner, followed by a descriptive
 Use the organization avatar wherever GitHub uses the organization identity. GitHub's navigation and application theme remain controlled by GitHub and individual users; the identity applies to editable organization and repository surfaces.
 
 Keep ordinary documentation simple and readable in light and dark modes. There is no need to repeat a large logo on every internal page. Future imagery and presentations should follow this palette and geometric style.
+
+## Current version
+
+Use only the Modular v2 geometry in the shared assets. Preserve the four separate components and rounded terminals. Do not substitute another F or the initials FI. The color and monochrome versions have identical geometry. [Preview and size checks](assets/preview.png).
