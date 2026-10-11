@@ -105,7 +105,7 @@ Static visual references: [light surrounding page](examples/preview-light.png) a
 
 All variants preserve the original four symbol components, wordmark positions and letter spacing. SVG artwork uses Arial/Helvetica fallbacks; use PNG where consistent font rendering is required. Do not recolor a logo with CSS inversion filters. Use the designated variant. Logo text has a contrast exception, but surrounding functional text does not.
 
-Regenerate the additions with `python3 brand/build-theme-assets.py` from the repository root (ImageMagick and Arial Bold required). The original avatar, banner and social preview remain the canonical fixed-background GitHub assets.
+Regenerate the base artwork with `python3 brand/build-base-assets.py`. This writes only `brand/assets/`; copying fixed-background assets to repository headers is a separate step. Regenerate the theme additions with `python3 brand/build-theme-assets.py` from the repository root (ImageMagick and Arial Bold required). The original avatar, banner and social preview remain the canonical fixed-background GitHub assets.
 
 Keep proportions and colors intact. Preserve the padding in the avatar for circular crops. Do not add glow, gradients, shadows, shields or locks. Use black or white monochrome symbols where color is unsuitable.
 
