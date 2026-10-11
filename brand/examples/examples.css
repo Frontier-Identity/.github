@@ -25,7 +25,8 @@ section { margin-top: 52px; }
 .warning { color: var(--warning); }
 .info { color: var(--info); }
 .tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
-.tabs [aria-pressed="true"] { background: var(--action); color: var(--on-action); border-color: var(--action); font-weight: 700; }
+.tabs [aria-pressed="true"] { background: var(--action); color: var(--on-action); border-color: var(--action-border); font-weight: 700; }
+.tabs [aria-pressed="true"]:hover { border-color: var(--action-border); }
 .tab-result { min-height: 58px; }
 .sample table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .sample th, .sample td { text-align: left; padding: 12px 8px; border-bottom: 1px solid var(--separator); }

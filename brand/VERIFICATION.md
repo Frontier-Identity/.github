@@ -4,7 +4,7 @@ Date: 2026-10-11. Scope: shared Horizon theme extension and component examples.
 
 ## Completed
 
-- Forty actual token pairs checked against unrounded WCAG relative-luminance calculations: text and action-label pairs at least 4.5:1; essential borders/focus against the reference backgrounds at least 3:1.
+- Forty-eight actual token pairs checked against unrounded WCAG relative-luminance calculations: text and action-label pairs at least 4.5:1; essential borders/focus against the reference backgrounds at least 3:1.
 - System-dark and explicit-dark color definitions match. Explicit light/dark examples use their own tokens independently of the surrounding theme.
 - Symbol path geometry, wordmark coordinates, font sizes and letter spacing match the canonical banner. All four transparent wordmarks and the light-surface symbol have SVG and PNG variants.
 - Initial visual review found clipped wordmark text. The export viewport was widened, all variants regenerated and the final complete wordmarks visually checked.
@@ -13,6 +13,15 @@ Date: 2026-10-11. Scope: shared Horizon theme extension and component examples.
 - Offline HTML/CSS document rendering reviewed for light and dark surrounding pages, at desktop width and with the production mobile layout rules applied. The examples remain present without JavaScript.
 
 Run `python3 brand/verify-theme.py` from the repository root to repeat the contrast, geometry and local-reference checks. Run `node --check brand/examples/examples.js` to repeat the syntax check.
+
+## Light-mode action refinement
+
+- Only the light-mode appearance was revised: original orange action fill with dark text, neutral action boundary, brighter hover and brown-orange link/focus colors. Error colors and logo assets were retained.
+- New explicit action-boundary tokens keep dark normal/hover borders identical to their previous values. All pre-existing explicit-dark and system-dark palette values were compared with the prior revision and are unchanged.
+- Contrast checks now include normal and hover action boundaries against both reference backgrounds.
+- The light desktop/mobile examples and a focused before/after reference were reviewed offline. The latter includes static normal, hover and focus representations with error text adjacent, making their visual separation reviewable.
+- The mixed-theme PNG references were refreshed to show the revised light examples. Their dark examples retain their prior styling.
+- Corrected an encoding issue in the temporary before/after rendering input and inspected the final UTF-8 render before publication.
 
 ## Limits
 

@@ -6,13 +6,15 @@
   --surface: #FFFFFF;
   --text: #0B0D0F;
   --muted: #59636D;
-  --accent: #B84000;
-  --action: #B84000;
-  --action-hover: #9B3500;
-  --on-action: #FFFFFF;
+  --accent: #935100;
+  --action: #FF6B21;
+  --action-border: #747E88;
+  --action-hover-border: #747E88;
+  --action-hover: #FF8447;
+  --on-action: #0B0D0F;
   --border: #747E88;
   --separator: #D8DDE2;
-  --focus: #B84000;
+  --focus: #935100;
   --success: #176B3A;
   --error: #B42318;
   --warning: #8A4B00;
@@ -29,6 +31,8 @@
     --muted: #A8B0B7;
     --accent: #FF6B21;
     --action: #FF6B21;
+    --action-border: #FF6B21;
+    --action-hover-border: #FF8447;
     --action-hover: #FF8447;
     --on-action: #0B0D0F;
     --border: #747E88;
@@ -50,6 +54,8 @@
   --muted: #A8B0B7;
   --accent: #FF6B21;
   --action: #FF6B21;
+  --action-border: #FF6B21;
+  --action-hover-border: #FF8447;
   --action-hover: #FF8447;
   --on-action: #0B0D0F;
   --border: #747E88;
@@ -71,8 +77,8 @@ a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px
 :where(a, button, input, select):focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
 .horizon-button { border: 1px solid var(--border); border-radius: 4px; padding: 10px 18px; background: var(--surface); color: var(--text); }
 .horizon-button:hover:not(:disabled) { border-color: var(--accent); }
-.horizon-button.primary { border-color: var(--action); background: var(--action); color: var(--on-action); font-weight: 700; }
-.horizon-button.primary:hover:not(:disabled) { background: var(--action-hover); border-color: var(--action-hover); }
+.horizon-button.primary { border-color: var(--action-border); background: var(--action); color: var(--on-action); font-weight: 700; }
+.horizon-button.primary:hover:not(:disabled) { background: var(--action-hover); border-color: var(--action-hover-border); }
 .horizon-button:disabled { color: var(--muted); border-style: dashed; cursor: not-allowed; }
 .horizon-field { display: block; width: 100%; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); color: var(--text); padding: 10px 12px; }
 .horizon-field::placeholder { color: var(--muted); opacity: 1; }

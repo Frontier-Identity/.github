@@ -30,7 +30,7 @@ for name, palette in [('light', light), ('dark', dark)]:
         value = contrast(palette['on-action'], palette[background])
         assert value >= 4.5, (name, background, value)
         results.append([name, 'on-action', background, round(value, 3), 4.5])
-    for foreground in ['border', 'focus']:
+    for foreground in ['border', 'focus', 'action-border', 'action-hover-border']:
         for background in ['page', 'surface']:
             value = contrast(palette[foreground], palette[background])
             assert value >= 3, (name, foreground, background, value)

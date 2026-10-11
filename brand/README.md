@@ -18,7 +18,7 @@ Orange is the primary accent. Keep presentations minimal, with generous spacing 
 
 The profile supports two equal themes. Both use the same typography, spacing, component geometry and Horizon symbol. Choose colors by their purpose rather than mechanically inverting the palette. Use [theme.css](theme.css) as the shared reference for websites and applications. These additions were requested by the founder on 2026-10-11.
 
-Frontier Orange remains `#FF6B21` in the brand artwork. The darker orange `#B84000` is a functional color for readable links, focus indicators and primary actions on light surfaces; it does not replace the brand orange.
+Frontier Orange remains `#FF6B21` in the brand artwork. The brown-orange `#935100` is a functional color for readable links and focus indicators on light surfaces. Primary actions use the original Frontier Orange with dark text and a neutral boundary. Red remains the error color.
 
 | Purpose / CSS token | Light | Dark |
 | --- | --- | --- |
@@ -26,13 +26,15 @@ Frontier Orange remains `#FF6B21` in the brand artwork. The darker orange `#B840
 | Content surface / `--surface` | `#FFFFFF` | `#15191D` |
 | Primary text / `--text` | `#0B0D0F` | `#F4F5F6` |
 | Secondary text / `--muted` | `#59636D` | `#A8B0B7` |
-| Links and functional accent / `--accent` | `#B84000` | `#FF6B21` |
-| Primary action / `--action` | `#B84000` | `#FF6B21` |
-| Primary action hover / `--action-hover` | `#9B3500` | `#FF8447` |
-| Text on primary action / `--on-action` | `#FFFFFF` | `#0B0D0F` |
+| Links and functional accent / `--accent` | `#935100` | `#FF6B21` |
+| Primary action / `--action` | `#FF6B21` | `#FF6B21` |
+| Primary action hover / `--action-hover` | `#FF8447` | `#FF8447` |
+| Text on primary action / `--on-action` | `#0B0D0F` | `#0B0D0F` |
+| Primary action boundary / `--action-border` | `#747E88` | `#FF6B21` |
+| Primary action hover boundary / `--action-hover-border` | `#747E88` | `#FF8447` |
 | Essential control border / `--border` | `#747E88` | `#747E88` |
 | Decorative separator / `--separator` | `#D8DDE2` | `#394149` |
-| Keyboard focus / `--focus` | `#B84000` | `#FF6B21` |
+| Keyboard focus / `--focus` | `#935100` | `#FF6B21` |
 | Success / `--success` | `#176B3A` | `#70D59B` |
 | Error / `--error` | `#B42318` | `#FF9A8F` |
 | Waiting or warning / `--warning` | `#8A4B00` | `#FFC857` |
@@ -41,7 +43,7 @@ Frontier Orange remains `#FF6B21` in the brand artwork. The darker orange `#B840
 ### Color and interaction rules
 
 - Ordinary text uses a contrast ratio of at least 4.5:1. Essential control boundaries and visual indicators use at least 3:1 against their adjacent background. These reference tokens meet those thresholds on the specified page and surface colors; every real composition still needs verification.
-- Original orange on white is only 2.85:1. Use it for brand artwork or decoration, not ordinary text or an essential control indicator. Light text on original orange is also insufficient; use the primary-action foreground/background pair from the table.
+- Original orange on white is only 2.85:1. Use it for brand artwork, decoration or action fills with the specified contrasting text and neutral boundary; do not use it as ordinary text or as the only essential control indicator on white. Light text on original orange is also insufficient; use the primary-action foreground/background pair from the table.
 - Decorative separators and subtle surface differences do not identify controls. Use `--border` when the boundary is necessary to understand or operate a control.
 - Links are underlined. Status combines a written label with color and, where useful, a symbol. Color alone does not carry the meaning.
 - Focus uses a visible 3px outline with a 4px offset. Check its contrast and visibility in the actual layout, including dialogs and scroll containers. The supplied offset separates the outline from a colored button.
@@ -49,6 +51,18 @@ Frontier Orange remains `#FF6B21` in the brand artwork. The darker orange `#B840
 - Keep identical component sizes and placement when switching themes. No gradients, glows, shadows or additional logo embellishments.
 
 Reference criteria: [text contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html), [non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) and [use of color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html). This profile is not a claim of whole-product WCAG conformance.
+
+### Light-mode refinement
+
+The initial dark-orange light-mode action (`#B84000` with white text) looked too close to an error state. The revised primary action uses original Frontier Orange (`#FF6B21`), Carbon Black text (`#0B0D0F`) and a neutral `#747E88` boundary. Hover brightens to `#FF8447`, retaining the neutral boundary. Selected-view controls use the same action pair and boundary.
+
+Links and focus use brown-orange `#935100`, avoiding the previous brick-red appearance. Errors keep `#B42318` and an explicit error label. This is a visual refinement, not a measured user-perception study. Dark-mode appearance and brand artwork are unchanged.
+
+The action label measures 6.84:1 against the normal fill and 8.01:1 against hover. The link color measures 6.15:1 against white and 5.63:1 against the light page. The action boundary measures 4.13:1 against white and 3.79:1 against the light page.
+
+External inspiration: [USWDS buttons](https://designsystem.digital.gov/components/button/) support a warm-accent action treatment; [Adobe Spectrum's semantic palette](https://github.com/adobe/spectrum-design-data/blob/main/docs/markdown/tokens/semantic-color-palette.md) separates accent, negative, notice and positive roles. The specific Horizon colors are our own choices, checked against our backgrounds.
+
+[Before/after and interaction-color reference](examples/light-refinement.png).
 
 ### Theme selection
 
