@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Horizon · Frontier Identity · Teman och komponenter</title>
+  <script>try { const t = localStorage.getItem('frontier-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch {}</script>
+  <link rel="stylesheet" href="../theme.css">
+  <link rel="stylesheet" href="examples.css">
+  <script src="examples.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Till innehållet</a>
+  <header>
+    <div class="logo-pair">
+      <img class="horizon-logo light" src="../assets/wordmark-light.svg" alt="Frontier Identity" width="880" height="270">
+      <img class="horizon-logo dark" src="../assets/wordmark-dark.svg" alt="Frontier Identity" width="880" height="270">
+    </div>
+    <label class="theme-picker">Utseende
+      <select class="horizon-field" id="theme"><option value="system">System</option><option value="light">Ljust</option><option value="dark">Mörkt</option></select>
+    </label>
+  </header>
+  <main id="content">
+    <p class="eyebrow">Horizon Modular v2</p>
+    <h1>En identitet. Två teman.</h1>
+    <p class="lead">Samma typografi, logotypgeometri och komponenter i ljust och mörkt läge. Välj utseende eller jämför exemplen nedan.</p>
+    <section aria-labelledby="comparison-title">
+      <h2 id="comparison-title">Gemensamma komponenter</h2>
+      <p class="muted">Exemplen visar båda teman samtidigt. Kontrollerna är demonstrationer och skickar ingen information.</p>
+      <div class="comparison" id="comparison">
+<article class="sample" data-theme="light" aria-labelledby="light-title">
+    <h3 id="light-title">Ljust tema</h3>
+    <p class="muted">Primär text, sekundär text och <a href="#logos-title">en understruken länk</a>.</p>
+    <div class="surface">
+      <strong>Arbetsöversikt</strong>
+      <p class="help">Samma ansvar och information oavsett tema.</p>
+      <div class="actions">
+        <button class="horizon-button primary" type="button">Primär åtgärd</button>
+        <button class="horizon-button" type="button">Sekundär åtgärd</button>
+        <button class="horizon-button" type="button" disabled>Ej tillgänglig</button>
+      </div>
+      <p class="help demo-feedback" aria-live="polite">Välj en åtgärd för att pröva återkopplingen.</p>
+      <div class="form-group">
+        <label for="light-name">Namn på arbetsområde</label>
+        <input class="horizon-field" id="light-name" placeholder="Exempel: kundhantering" aria-describedby="light-help">
+        <p class="help" id="light-help">Hjälptexten använder temats sekundära textfärg.</p>
+      </div>
+      <div class="form-group">
+        <label for="light-reference">Referens</label>
+        <input class="horizon-field" id="light-reference" value="" placeholder="Ange referens" aria-invalid="true" aria-describedby="light-error">
+        <p class="error" id="light-error"><strong>Fel:</strong> Referens saknas. Detta fält visar ett felläge.</p>
+      </div>
+      <div class="statuses">
+        <div class="status success">✓ Klar: resultatet har granskats</div>
+        <div class="status warning">! Väntar: beslut behövs</div>
+        <div class="status info">i Information: arbetet pågår</div>
+      </div>
+      <div class="tabs" aria-label="Välj arbetsvy">
+        <button class="horizon-button" type="button" aria-pressed="true" data-view="current">Aktuellt</button>
+        <button class="horizon-button" type="button" aria-pressed="false" data-view="history">Historik</button>
+      </div>
+      <p class="tab-result" aria-live="polite">Aktuellt arbete: två exempel i planen.</p>
+      <table><caption class="help">Exempel på arbetsläge</caption><thead><tr><th scope="col">Område</th><th scope="col">Läge</th></tr></thead>
+      <tbody><tr><td>Planering</td><td>Pågår</td></tr><tr><td>Granskning</td><td>Väntar</td></tr></tbody></table>
+    </div>
+</article>
+<article class="sample" data-theme="dark" aria-labelledby="dark-title">
+    <h3 id="dark-title">Mörkt tema</h3>
+    <p class="muted">Primär text, sekundär text och <a href="#logos-title">en understruken länk</a>.</p>
+    <div class="surface">
+      <strong>Arbetsöversikt</strong>
+      <p class="help">Samma ansvar och information oavsett tema.</p>
+      <div class="actions">
+        <button class="horizon-button primary" type="button">Primär åtgärd</button>
+        <button class="horizon-button" type="button">Sekundär åtgärd</button>
+        <button class="horizon-button" type="button" disabled>Ej tillgänglig</button>
+      </div>
+      <p class="help demo-feedback" aria-live="polite">Välj en åtgärd för att pröva återkopplingen.</p>
+      <div class="form-group">
+        <label for="dark-name">Namn på arbetsområde</label>
+        <input class="horizon-field" id="dark-name" placeholder="Exempel: kundhantering" aria-describedby="dark-help">
+        <p class="help" id="dark-help">Hjälptexten använder temats sekundära textfärg.</p>
+      </div>
+      <div class="form-group">
+        <label for="dark-reference">Referens</label>
+        <input class="horizon-field" id="dark-reference" value="" placeholder="Ange referens" aria-invalid="true" aria-describedby="dark-error">
+        <p class="error" id="dark-error"><strong>Fel:</strong> Referens saknas. Detta fält visar ett felläge.</p>
+      </div>
+      <div class="statuses">
+        <div class="status success">✓ Klar: resultatet har granskats</div>
+        <div class="status warning">! Väntar: beslut behövs</div>
+        <div class="status info">i Information: arbetet pågår</div>
+      </div>
+      <div class="tabs" aria-label="Välj arbetsvy">
+        <button class="horizon-button" type="button" aria-pressed="true" data-view="current">Aktuellt</button>
+        <button class="horizon-button" type="button" aria-pressed="false" data-view="history">Historik</button>
+      </div>
+      <p class="tab-result" aria-live="polite">Aktuellt arbete: två exempel i planen.</p>
+      <table><caption class="help">Exempel på arbetsläge</caption><thead><tr><th scope="col">Område</th><th scope="col">Läge</th></tr></thead>
+      <tbody><tr><td>Planering</td><td>Pågår</td></tr><tr><td>Granskning</td><td>Väntar</td></tr></tbody></table>
+    </div>
+</article>
+</div>
+    </section>
+    <section aria-labelledby="logos-title">
+      <h2 id="logos-title">Logotypvarianter</h2>
+      <div class="logo-gallery">
+        <figure data-theme="light"><img src="../assets/wordmark-light.svg" alt="Färglogotyp för ljus bakgrund" width="880" height="270"><figcaption>Färg på ljus yta</figcaption></figure>
+        <figure data-theme="dark"><img src="../assets/wordmark-dark.svg" alt="Färglogotyp för mörk bakgrund" width="880" height="270"><figcaption>Färg på mörk yta</figcaption></figure>
+        <figure data-theme="light"><img src="../assets/wordmark-black.svg" alt="Svart logotyp" width="880" height="270"><figcaption>Svart monokrom</figcaption></figure>
+        <figure data-theme="dark"><img src="../assets/wordmark-white.svg" alt="Vit logotyp" width="880" height="270"><figcaption>Vit monokrom</figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <footer>Frontier Identity · frontierid.ai<br>Profilreferens för framtida webbplatser och tjänster.</footer>
+</body>
+</html>

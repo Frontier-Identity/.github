@@ -1,0 +1,86 @@
+/* Horizon Modular v2: shared semantic tokens for both themes. */
+:root, [data-theme="light"] {
+  color-scheme: light;
+  --brand-orange: #FF6B21;
+  --page: #F4F5F6;
+  --surface: #FFFFFF;
+  --text: #0B0D0F;
+  --muted: #59636D;
+  --accent: #B84000;
+  --action: #B84000;
+  --action-hover: #9B3500;
+  --on-action: #FFFFFF;
+  --border: #747E88;
+  --separator: #D8DDE2;
+  --focus: #B84000;
+  --success: #176B3A;
+  --error: #B42318;
+  --warning: #8A4B00;
+  --info: #175CD3;
+  --logo-dark-display: none;
+  --logo-light-display: block;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0B0D0F;
+    --surface: #15191D;
+    --text: #F4F5F6;
+    --muted: #A8B0B7;
+    --accent: #FF6B21;
+    --action: #FF6B21;
+    --action-hover: #FF8447;
+    --on-action: #0B0D0F;
+    --border: #747E88;
+    --separator: #394149;
+    --focus: #FF6B21;
+    --success: #70D59B;
+    --error: #FF9A8F;
+    --warning: #FFC857;
+    --info: #8DB8FF;
+    --logo-dark-display: block;
+    --logo-light-display: none;
+  }
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0B0D0F;
+  --surface: #15191D;
+  --text: #F4F5F6;
+  --muted: #A8B0B7;
+  --accent: #FF6B21;
+  --action: #FF6B21;
+  --action-hover: #FF8447;
+  --on-action: #0B0D0F;
+  --border: #747E88;
+  --separator: #394149;
+  --focus: #FF6B21;
+  --success: #70D59B;
+  --error: #FF9A8F;
+  --warning: #FFC857;
+  --info: #8DB8FF;
+  --logo-dark-display: block;
+  --logo-light-display: none;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--text); font: 16px/1.55 Arial, Helvetica, sans-serif; }
+button, input, select { font: inherit; }
+button, select, input { min-height: 44px; }
+button, select { cursor: pointer; }
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+:where(a, button, input, select):focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+.horizon-button { border: 1px solid var(--border); border-radius: 4px; padding: 10px 18px; background: var(--surface); color: var(--text); }
+.horizon-button:hover:not(:disabled) { border-color: var(--accent); }
+.horizon-button.primary { border-color: var(--action); background: var(--action); color: var(--on-action); font-weight: 700; }
+.horizon-button.primary:hover:not(:disabled) { background: var(--action-hover); border-color: var(--action-hover); }
+.horizon-button:disabled { color: var(--muted); border-style: dashed; cursor: not-allowed; }
+.horizon-field { display: block; width: 100%; border: 1px solid var(--border); border-radius: 4px; background: var(--surface); color: var(--text); padding: 10px 12px; }
+.horizon-field::placeholder { color: var(--muted); opacity: 1; }
+.horizon-field[aria-invalid="true"] { border: 2px solid var(--error); }
+.horizon-logo { width: 275px; max-width: 100%; height: auto; }
+.horizon-logo.dark { display: var(--logo-dark-display); }
+.horizon-logo.light { display: var(--logo-light-display); }
+@media (forced-colors: active) {
+  :where(a, button, input, select):focus-visible { outline-color: Highlight; }
+  .horizon-button.primary { border: 2px solid ButtonText; }
+}
