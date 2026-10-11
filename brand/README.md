@@ -2,6 +2,12 @@
 
 Horizon Modular v2 is the founder-approved graphical identity for the Frontier Identity GitHub organization, selected as proposal 01 on 2026-10-11. It supersedes Horizon v1. The segmented F uses a rounded orange upper horizon, an orange accent square, a white middle segment and a white lower stem. The full wordmark is FRONTIER IDENTITY.
 
+## Current standard
+
+Effective 2026-10-11, this guide is the required graphical standard for new and revised Frontier Identity material, repository presentation, websites and interfaces. The founder confirmed adoption after the light-mode refinement. Use the current semantic tokens in [theme.css](theme.css), the designated logo variants and the shared component examples when producing or updating material.
+
+In light mode, primary actions use Frontier Orange `#FF6B21`, Carbon Black text `#0B0D0F` and the neutral `#747E88` boundary. Links and focus use `#935100`; errors use `#B42318`. The former `#B84000` primary-action treatment is superseded. Dark-mode colors remain as specified below. Existing presentations retain their approved design; apply this standard when they are next revised.
+
 ## Palette
 
 | Role | Color |
